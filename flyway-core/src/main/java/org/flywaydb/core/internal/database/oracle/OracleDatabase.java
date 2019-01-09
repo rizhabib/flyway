@@ -115,7 +115,7 @@ public class OracleDatabase extends Database<OracleConnection> {
     public final void ensureSupported() {
         ensureDatabaseIsRecentEnough("Oracle", "10");
 
-        ensureDatabaseIsCompatibleWithFlywayEdition("Oracle", "Oracle", "12.2");
+        ensureDatabaseIsCompatibleWithFlywayEdition("Oracle", "Oracle", "12.1");
 
         recommendFlywayUpgradeIfNecessary("Oracle", "18.0");
     }
