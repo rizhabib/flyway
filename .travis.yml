@@ -7,3 +7,9 @@ jdk:
 install: "sh ./mvnw install -e"
 before_script: echo OK
 script: echo Done.
+
+# safelist
+branches:
+  only:
+    - master
+    - flyway-5.2.4
