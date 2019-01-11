@@ -15,7 +15,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!--
     Detailed information how to contribute: https://flywaydb.org/documentation/contribute/code/
@@ -29,7 +30,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.flywaydb</groupId>
     <artifactId>flyway-parent</artifactId>
-    <version>0-SNAPSHOT</version>
+    <version>5.2.4-oracle-12.1-support-RELEASE</version>
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
     <description>Flyway: Database Migrations Made Easy.</description>
@@ -48,10 +49,6 @@
         <developerConnection>scm:git:https://github.com/flyway/flyway.git</developerConnection>
 
 
-
-
-
-
         <tag>HEAD</tag>
     </scm>
     <developers>
@@ -68,12 +65,6 @@
         <module>flyway-commandline</module>
 
 
-
-
-
-
-
-
     </modules>
 
     <distributionManagement>
@@ -88,11 +79,6 @@
             <name>Nexus Release Repository</name>
             <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-
-
-
-
-
 
 
     </distributionManagement>
@@ -114,14 +100,6 @@
             <id>flyway-repo</id>
             <url>s3://flyway-repo/release</url>
         </repository>
-
-
-
-
-
-
-
-
 
 
     </repositories>
@@ -146,6 +124,9 @@
         <version.android>4.0.1.2</version.android>
         <version.slf4j>1.7.16</version.slf4j>
         <version.jre>8.172</version.jre>
+
+        <project.version>flyway-5.2.4-oracle-12.1-support-RELEASE</project.version>
+        <project.artifactId>5.2.4-oracle-12.1-support-RELEASE</project.artifactId>
     </properties>
 
     <dependencyManagement>
@@ -282,54 +263,6 @@
             </dependency>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <dependency>
                 <groupId>com.microsoft.sqlserver</groupId>
                 <artifactId>mssql-jdbc</artifactId>
@@ -410,19 +343,6 @@
     <build>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -450,14 +370,6 @@
                     <artifactId>maven-bundle-plugin</artifactId>
                     <version>2.3.7</version>
                 </plugin>
-
-
-
-
-
-
-
-
 
 
                 <plugin>
@@ -593,88 +505,6 @@
             </plugin>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <configuration>
@@ -709,20 +539,20 @@
             <build>
                 <plugins>
                     <!--<plugin>-->
-                        <!--<artifactId>maven-javadoc-plugin</artifactId>-->
-                        <!--<configuration>-->
-                            <!--<encoding>UTF-8</encoding>-->
-                            <!--<additionalparam>-Xdoclint:none</additionalparam>-->
-                        <!--</configuration>-->
-                        <!--<executions>-->
-                            <!--<execution>-->
-                                <!--<id>attach-sources</id>-->
-                                <!--<phase>verify</phase>-->
-                                <!--<goals>-->
-                                    <!--<goal>jar</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                        <!--</executions>-->
+                    <!--<artifactId>maven-javadoc-plugin</artifactId>-->
+                    <!--<configuration>-->
+                    <!--<encoding>UTF-8</encoding>-->
+                    <!--<additionalparam>-Xdoclint:none</additionalparam>-->
+                    <!--</configuration>-->
+                    <!--<executions>-->
+                    <!--<execution>-->
+                    <!--<id>attach-sources</id>-->
+                    <!--<phase>verify</phase>-->
+                    <!--<goals>-->
+                    <!--<goal>jar</goal>-->
+                    <!--</goals>-->
+                    <!--</execution>-->
+                    <!--</executions>-->
                     <!--</plugin>-->
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
